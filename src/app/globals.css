@@ -17,11 +17,55 @@
 }
 
 body {
+  box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  display: flex;
+  flex-direction: column;
+  background: url('https://1pg.link/uploads/backgrounds/25e7f2a80789126ca80e4437e77e9b22.png');
+  background-color: #062642;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+/*   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+
+/* components */
+
+@layer components {
+  .menu-button{
+    @apply px-2 py-1 bg-black w-80 flex justify-center items-center h-10 rounded-sm m-2 
+    hover:cursor-pointer hover:bg-white border-solid border-black border-2 hover:text-black
+    transition-all ease-in-out
+  }
+  .icons {
+    @apply w-[1.25em] h-[1.20em] hover:scale-110 hover:cursor-pointer my-3 mx-4
+  }
+
+  .text-box {
+    @apply w-[inherit] p-3
+  }
+
+  .space {
+    @apply h-4 w-[inherit]
+  }
+
+  .images {
+    @apply w-full h-[180px] rounded-md
+  }
+
+  .card {
+    @apply w-full bg-white my-2 text-black rounded-md p-3 flex flex-col
+  }
+
+  .contact {
+    @apply transition-all ease-linear my-4 rounded-full flex justify-center items-center w-[100%] h-[55px] hover:cursor-pointer hover:scale-105 border-white border-[1px]
+  }
 }
