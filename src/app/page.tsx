@@ -13,15 +13,15 @@ export default function Home() {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyC8oldW1Q_0llLkf-qH7K4Xa68aJr7PvYE"
+    googleMapsApiKey: ""
   })
 
   return (
-    <div className='flex-col'>
+    <div className='flex items-center justify-center'>
 
       <Menu />
 
-      <div className='flex-col w-[760px]  justify-center items-center'>
+      <div className='flex flex-col w-[760px] justify-center items-center'>
         <div className='my-24'>
           <div className='flex justify-center items-center'>
             <img src='https://1pg.link/uploads/block_images/eefecab91413df539605c33a980f57f5.png' />
@@ -61,15 +61,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        <div className="flex flex-col w-full">
+          <h4>O QUE É O GRUPO VUIT?</h4>
+          <h5>O GRUPO VUIT</h5>
+        </div>
 
-        <h4>O QUE É O GRUPO VUIT?</h4>
-        <h5>O GRUPO VUIT</h5>
         <div className='flex w-[100%] aspect-video'>
           <iframe className='flex w-full h-full rounded-md' src="https://www.youtube.com/embed/44gxvIpnsM8?si=9ilP4dCuneX67dKh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
         <div className='text-box'>
           Vuit surge da necessidade de expansão de uma grande operação já existente, orientada para a customização da gestão de seguros de vida, saúde, crédito consignado e benefícios às empresas e empregados.
-          <br/><br/>
+          <br /><br />
           Focada na consultoria de seguros e benefícios, a Vuit quebra paradigmas no mercado atuando de forma disruptiva com conceitos colaborativos que promovem todo o ecossistema envolvido.
         </div>
 
@@ -135,25 +138,50 @@ export default function Home() {
 
         <BreakLine />
 
-        <a href='https://vuit.com.br/beneficios' className='images hover:scale-105'>
+        <a href='https://vuit.com.br/cred' className='images hover:scale-105'>
+          <img src='https://1pg.link/uploads/block_images/ff34c16e7e252d23bcd4b60e9156a1e8.png' className='images hover:scale-105' />
+        </a>
+
+        <div className="text-box">
+          Conheça as vantagens das empresas que utilizam Vuit Benefícios:
+          <br/><br/>
+          - A Sodexo possui vasta rede credenciada em todo o território nacional;
+          <br/>
+          - Redução do tempo de recrutamento;
+          <br/>
+          - Redução com absenteísmos;
+          <br/>
+          - Redução da folha de pagamento;
+          <br/>
+          - Implantação diferenciada aos clientes;
+          <br/>
+          - Praticidade na gestão dos benefícios e relatórios;
+          <br/>
+          - Possibilidade de negociação diferenciada.
+          <br/>
+        </div>
+
+        <BreakLine />
+
+        <a href='https://vuit.com.br/cred' className='images hover:scale-105'>
           <img src='https://1pg.link/uploads/block_images/145234f7f7df2d6e3302e1889985c5e7.png' className='images hover:scale-105' />
         </a>
 
         <div className='text-box'>
           A Vuit Cred é uma empresa do Grupo Vuit, que é responsável pela gestão de mais de 150 mil pessoas e mais de 1.500 empresas assistidas por seus produtos e benefícios.
-          <br/><br/>
+          <br /><br />
           Devido à capilaridade de clientes espalhados em todos os estados brasileiros, foi possível conquistar reduções nas taxas, nos custos e personalizar os processos.
-          <br/><br/>
+          <br /><br />
           Contratando o crédito consignado com a Vuit Cred é possível ajudar seus colaboradores a terem crédito ágil e simples, tudo com desburocratização. sendo um facilitador ao RH da empresa.
-          <br/><br/>
+          <br /><br />
           - MENOR TAXA DE JUROS
-          <br/><br/>
+          <br /><br />
           - EDUCAÇÃO FINANCEIRA E DE QUALIDADE
-          <br/><br/>
+          <br /><br />
           41 2101 1724
-          <br/>
+          <br />
           41 99267 2010
-          <br/><br/>
+          <br /><br />
           @VUITCRED
         </div>
 
@@ -161,9 +189,27 @@ export default function Home() {
 
         <BreakLine />
 
-        <iframe className='w-full aspect-square' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
+        <h4>CONTATOS:</h4>
+
+        <iframe className='w-full rounded-s overflow-hidden aspect-[38/35]' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
+
+        <a className='bg-[#1B8B1D] contact'>
+          <svg className='h-4 w-4 mx-2' fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
+            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+
+        <a className='bg-[#4EABE1] contact'>
+          <svg viewBox="0 0 1024 1024" fill="currentColor" height="1em" width="1em">
+            <path d="M885.6 230.2L779.1 123.8a80.83 80.83 0 00-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L549.8 238.4a80.83 80.83 0 00-23.8 57.3c0 21.7 8.5 42.1 23.8 57.4l83.8 83.8A393.82 393.82 0 01553.1 553 395.34 395.34 0 01437 633.8L353.2 550a80.83 80.83 0 00-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L123.8 664.5a80.89 80.89 0 00-23.8 57.4c0 21.7 8.5 42.1 23.8 57.4l106.3 106.3c24.4 24.5 58.1 38.4 92.7 38.4 7.3 0 14.3-.6 21.2-1.8 134.8-22.2 268.5-93.9 376.4-201.7C828.2 612.8 899.8 479.2 922.3 344c6.8-41.3-6.9-83.8-36.7-113.8z" />
+          </svg>
+          <span>Telefone</span>
+        </a>
 
         <BreakLine />
+
+        <h4>LOCALIZAÇÃO:</h4>
 
         <div className='w-[100%] h-[450px] '>
           {isLoaded ? (
@@ -178,7 +224,16 @@ export default function Home() {
           ) : <></>}
         </div>
 
+        <div className="text-box items-center justify-center flex text-center">
+          Rua Pasteur, 463 - Água Verde -13 andar
+          <br />
+          Curitiba-PR
+        </div>
+
+        <img className="h-[150px] w-[350px]" src="https://1pg.link/uploads/block_images/881e9b2b95785d8b81100c2785a72376.png" />
+
       </div>
+
     </div>
 
   )
