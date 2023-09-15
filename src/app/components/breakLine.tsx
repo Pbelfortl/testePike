@@ -2,7 +2,7 @@
 export function BreakLine() {
 
     return (
-        <div className="flex justify-between w-full items-center h-6 my-3">
+        <div className="flex justify-between w-full items-center h-6 my-4">
             <hr className="h-1 w-[45%]" />
             <svg className="w-5 h-4" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
                 <path

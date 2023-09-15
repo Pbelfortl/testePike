@@ -17,25 +17,26 @@
 }
 
 body {
+  font-family: 'Open+Sans', "Helvetica Neue", Arial, sans-serif !important;
   box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
   display: flex;
   flex-direction: column;
   background: url('https://1pg.link/uploads/backgrounds/25e7f2a80789126ca80e4437e77e9b22.png');
   background-color: #062642;
+  object-fit: contain;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: top center;
+  background-position: top;
   display: flex;
   align-items: center;
-/*   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
+.map-marker {
+  margin-left: 180px;
+  width: 150px;
+  text-wrap: wrap;
+}
 
 /* components */
 
@@ -46,11 +47,11 @@ body {
     transition-all ease-in-out
   }
   .icons {
-    @apply w-[1.25em] h-[1.20em] hover:scale-110 hover:cursor-pointer my-3 mx-4
+    @apply w-6 h-[19px] hover:scale-110 hover:cursor-pointer my-3 mx-4
   }
 
   .text-box {
-    @apply w-[inherit] p-3 font-sans text-base
+    @apply w-[inherit] p-[33px] font-sans text-base
   }
 
   .space {
@@ -58,14 +59,27 @@ body {
   }
 
   .images {
-    @apply w-full h-[180px] rounded-md my-2
+    @apply w-full h-[180px] rounded-md my-2 transition-all
   }
 
   .card {
-    @apply w-full bg-white my-1 text-black rounded-md p-3 flex flex-col
+    @apply w-full bg-white my-1.5 text-black rounded-md py-3 px-6 flex flex-col text-[15px]
   }
 
   .contact {
-    @apply transition-all ease-linear my-3 rounded-full flex justify-center items-center w-[100%] h-[55px] hover:cursor-pointer hover:scale-105 border-white border-[1.5px]
+    @apply transition-all ease-linear my-2 rounded-full flex justify-center items-center w-[100%] h-[55px] hover:cursor-pointer hover:scale-105 border-white border-[1.5px]
+  }
+}
+
+@layer utilities {
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .no-scrollbar-::-webkit-scrollbar {
+      display: none;
   }
 }

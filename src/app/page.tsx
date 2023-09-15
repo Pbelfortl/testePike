@@ -1,7 +1,5 @@
 "use client"
-import Image from 'next/image'
 import { useState } from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { BreakLine } from './components/breakLine';
 import { Card } from './components/infoCard';
 import { Contact } from './components/contact';
@@ -11,22 +9,17 @@ export default function Home() {
 
   const [openCard, setOpenCard] = useState(0)
 
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: ""
-  })
-
   return (
     <div className='flex items-center justify-center'>
 
       <Menu />
 
-      <div className='flex flex-col w-[760px] justify-center items-center'>
-        <div className='my-24'>
+      <div className='flex flex-col w-[760px] px-2 justify-center items-center'>
+        <div className='my-14 w-full p-10'>
           <div className='flex justify-center items-center'>
             <img src='https://1pg.link/uploads/block_images/eefecab91413df539605c33a980f57f5.png' />
           </div>
-          <h6 className='flex justify-center items-center'>SUA EMPRESA MUITO MAIS SEGURA</h6>
+          <h6 className='flex justify-center items-center my-1'>SUA EMPRESA MUITO MAIS SEGURA</h6>
           <div className='flex justify-center my-4'>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="icons">
@@ -61,14 +54,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        <div className="flex flex-col w-full">
-          <h4>O QUE É O GRUPO VUIT?</h4>
-          <h5>O GRUPO VUIT</h5>
+
+        <div className="flex flex-col w-full px-2">
+          <h4 className="text-xl font-medium my-1.5">O QUE É O GRUPO VUIT</h4>
+          <h5 className="text-lg font-medium text-[#F0C764] my-1.5">O GRUPO VUIT</h5>
         </div>
 
-        <div className='flex w-[100%] aspect-video'>
-          <iframe className='flex w-full h-full rounded-md' src="https://www.youtube.com/embed/44gxvIpnsM8?si=9ilP4dCuneX67dKh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        <div className='flex w-[100%] p-2 aspect-video rounded-md overflow-hidden no-scrollbar'>
+          <iframe className='flex w-full h-full rounded' src="https://www.youtube.com/embed/44gxvIpnsM8?si=9ilP4dCuneX67dKh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
         <div className='text-box'>
           Vuit surge da necessidade de expansão de uma grande operação já existente, orientada para a customização da gestão de seguros de vida, saúde, crédito consignado e benefícios às empresas e empregados.
@@ -76,7 +69,7 @@ export default function Home() {
           Focada na consultoria de seguros e benefícios, a Vuit quebra paradigmas no mercado atuando de forma disruptiva com conceitos colaborativos que promovem todo o ecossistema envolvido.
         </div>
 
-        <a className='bg-white rounded-full flex justify-center items-center w-[100%] h-[55px] relative px-1 hover:cursor-pointer hover:scale-105'>
+        <a className='bg-white rounded-full flex justify-center transition-all items-center w-[100%] h-[55px] relative px-2 hover:cursor-pointer hover:scale-[1.05]'>
           <img src='https://1pg.link/uploads/block_thumbnail_images/644ce0975a8aa918dc06603abbe0deb7.png' className='w-11 h-11  left-1.5 top-[5.5px] absolute rounded-full' />
           <svg className='text-black h-4 w-5' aria-hidden="true" focusable="false" data-prefix="fab" data-icon="accusoft" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M322.1 252v-1l-51.2-65.8s-12 1.6-25 15.1c-9 9.3-242.1 239.1-243.4 240.9-7 10 1.6 6.8 15.7 1.7.8 0 114.5-36.6 114.5-36.6.5-.6-.1-.1.6-.6-.4-5.1-.8-26.2-1-27.7-.6-5.2 2.2-6.9 7-8.9l92.6-33.8c.6-.8 88.5-81.7 90.2-83.3zm160.1 120.1c13.3 16.1 20.7 13.3 30.8 9.3 3.2-1.2 115.4-47.6 117.8-48.9 8-4.3-1.7-16.7-7.2-23.4-2.1-2.5-205.1-245.6-207.2-248.3-9.7-12.2-14.3-12.9-38.4-12.8-10.2 0-106.8.5-116.5.6-19.2.1-32.9-.3-19.2 16.9C250 75 476.5 365.2 482.2 372.1zm152.7 1.6c-2.3-.3-24.6-4.7-38-7.2 0 0-115 50.4-117.5 51.6-16 7.3-26.9-3.2-36.7-14.6l-57.1-74c-5.4-.9-60.4-9.6-65.3-9.3-3.1.2-9.6.8-14.4 2.9-4.9 2.1-145.2 52.8-150.2 54.7-5.1 2-11.4 3.6-11.1 7.6.2 2.5 2 2.6 4.6 3.5 2.7.8 300.9 67.6 308 69.1 15.6 3.3 38.5 10.5 53.6 1.7 2.1-1.2 123.8-76.4 125.8-77.8 5.4-4 4.3-6.8-1.7-8.2z"></path></svg>
           <span className='text-black px-2'>Baixe PDF apresentação Tudo na Vuit!</span>
@@ -84,114 +77,151 @@ export default function Home() {
 
         <BreakLine />
 
-        <img className='images' src='https://1pg.link/uploads/block_images/2df55ec0cbaace41b8a808a7441f26b8.png' />
+        <img className='images mb-10' src='https://1pg.link/uploads/block_images/2df55ec0cbaace41b8a808a7441f26b8.png' />
 
-        <Card
-          cardNumber={1}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='Seguro de vida em grupo e acidentes pessoais'
-          desccription='A Vuit Seguros é uma corretora que assessora as empresas, fornecendo seguro de vida em grupo e acidentes pessoais, permitindo que economizem tempo, esforço e dinheiro.'
-        />
+        <div className="flex flex-col w-full mb-16">
 
-        <Card
-          cardNumber={2}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='Seguro de saúde, dental e telemedicina'
-          desccription='Seguindo os objetivos dos empregadores, somos capazes de propor acordos que atendam às expectativas dos colaboradores por sua empresa. Juntos encontramos as melhores soluções para seguro saúde, odontológico e telemedicina, um dos benefícios mais desejados pelos colaboradores. Ajudamos as empresas a encontrar uma solução nesta área, fornecendo planos de qualidade, gerenciando a demanda e acompanhamento de pós-venda, fortalecendo o comprometimento dos funcionários com a empresa.'
-        />
+          <Card
+            cardNumber={1}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='Seguro de vida em grupo e acidentes pessoais'
+            desccription='A Vuit Seguros é uma corretora que assessora as empresas, fornecendo seguro de vida em grupo e acidentes pessoais, permitindo que economizem tempo, esforço e dinheiro.'
+          />
 
-        <Card
-          cardNumber={3}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='Responsabilidade civil e prestação de serviços'
-          desccription='Os seguros de responsabilidade civil geral, prestação de serviços, profissional, E&O e D&O, não são mais uma opção, mas sim uma necessidade, trazendo tranquilidade exigida pelos seus clientes e principalmente, protegendo os seus negócios. Estar preparado para o inesperado é importante para o sucesso da sua empresa. O seguro pode preencher lacunas na cobertura, ajudar a gerenciar riscos e garantir a continuidade dos negócios.'
-        />
+          <Card
+            cardNumber={2}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='Seguro de saúde, dental e telemedicina'
+            desccription='Seguindo os objetivos dos empregadores, somos capazes de propor acordos que atendam às expectativas dos colaboradores por sua empresa. Juntos encontramos as melhores soluções para seguro saúde, odontológico e telemedicina, um dos benefícios mais desejados pelos colaboradores. Ajudamos as empresas a encontrar uma solução nesta área, fornecendo planos de qualidade, gerenciando a demanda e acompanhamento de pós-venda, fortalecendo o comprometimento dos funcionários com a empresa.'
+          />
 
-        <Card
-          cardNumber={4}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='Seguro garantia e Garantia Judicial'
-          desccription='Através da VUIT Seguros, você tem as garantias que precisa para fazer seu trabalho. Nossos clientes estão em primeiro lugar, e nossos profissionais são projetados para ajudar nas suas necessidades. Serviços especializados como garantia de proposta, garantia de execução, antecipação de pagamento ou garantia judicial, liberando os recursos imobilizados e este ajudando no fluxo de caixa da sua empresa.'
-        />
+          <Card
+            cardNumber={3}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='Responsabilidade civil e prestação de serviços'
+            desccription='Os seguros de responsabilidade civil geral, prestação de serviços, profissional, E&O e D&O, não são mais uma opção, mas sim uma necessidade, trazendo tranquilidade exigida pelos seus clientes e principalmente, protegendo os seus negócios. Estar preparado para o inesperado é importante para o sucesso da sua empresa. O seguro pode preencher lacunas na cobertura, ajudar a gerenciar riscos e garantir a continuidade dos negócios.'
+          />
 
-        <Card
-          cardNumber={5}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='Crédito consignado VUIT Cred'
-          desccription='Use sua empresa para oferecer o benefício de crédito consignado ao seu funcionário, com a facilidade de desconto em folha, juros a partir de 1,89% ao mês, parcelamento em até 48x e o melhor de tudo: após 3 dias do primeiro contanto o recurso já pode estar disponível na conta do colaborador'
-        />
+          <Card
+            cardNumber={4}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='Seguro garantia e Garantia Judicial'
+            desccription='Através da VUIT Seguros, você tem as garantias que precisa para fazer seu trabalho. Nossos clientes estão em primeiro lugar, e nossos profissionais são projetados para ajudar nas suas necessidades. Serviços especializados como garantia de proposta, garantia de execução, antecipação de pagamento ou garantia judicial, liberando os recursos imobilizados e este ajudando no fluxo de caixa da sua empresa.'
+          />
 
-        <Card
-          cardNumber={6}
-          openCard={openCard}
-          setOpenCard={setOpenCard}
-          title='VUIT benefícios: vale alimentação, refeição e combustível'
-          desccription='Através da parceria com a Sodexo, maior rede credenciada de Vale Alimentação e Vale Refeição do Brasil, a Vuit benefícios tem como objetivo expandir o leque de produtos oferecidos aos seus clientes. É bom para o seu RH. Ao oferecer o vale-alimentação e o vale-refeição Sodexo, sua empresa pode receber isenção de encargos sociais e descontos no IR previstos pelo PAT. Faça a gestão online dos benefícios com praticidade, segurança e controle de gastos. É bom para os seus colaboradores. Seus funcionários têm acesso a opções de alimentação saudável. Os cartões de benefícios são aceitos em estabelecimentos físicos e aplicativos de entrega. É mais qualidade de vida para todos.'
-        />
+          <Card
+            cardNumber={5}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='Crédito consignado VUIT Cred'
+            desccription='Use sua empresa para oferecer o benefício de crédito consignado ao seu funcionário, com a facilidade de desconto em folha, juros a partir de 1,89% ao mês, parcelamento em até 48x e o melhor de tudo: após 3 dias do primeiro contanto o recurso já pode estar disponível na conta do colaborador'
+          />
+
+          <Card
+            cardNumber={6}
+            openCard={openCard}
+            setOpenCard={setOpenCard}
+            title='VUIT benefícios: vale alimentação, refeição e combustível'
+            desccription='Através da parceria com a Sodexo, maior rede credenciada de Vale Alimentação e Vale Refeição do Brasil, a Vuit benefícios tem como objetivo expandir o leque de produtos oferecidos aos seus clientes. É bom para o seu RH. Ao oferecer o vale-alimentação e o vale-refeição Sodexo, sua empresa pode receber isenção de encargos sociais e descontos no IR previstos pelo PAT. Faça a gestão online dos benefícios com praticidade, segurança e controle de gastos. É bom para os seus colaboradores. Seus funcionários têm acesso a opções de alimentação saudável. Os cartões de benefícios são aceitos em estabelecimentos físicos e aplicativos de entrega. É mais qualidade de vida para todos.'
+          />
+
+        </div>
 
         <Contact text='Solicite uma proposta Vuit seguros' />
 
         <BreakLine />
 
-        <a href='https://vuit.com.br/cred' className='images hover:scale-105'>
+        <a href='https://vuit.com.br/beneficios' target='_blank' className='images hover:scale-[1.0] hover:animate-grow'>
           <img src='https://1pg.link/uploads/block_images/ff34c16e7e252d23bcd4b60e9156a1e8.png' className='images hover:scale-105' />
         </a>
 
         <div className="text-box">
           Conheça as vantagens das empresas que utilizam Vuit Benefícios:
-          <br/><br/>
-          - A Sodexo possui vasta rede credenciada em todo o território nacional;
-          <br/>
-          - Redução do tempo de recrutamento;
-          <br/>
-          - Redução com absenteísmos;
-          <br/>
-          - Redução da folha de pagamento;
-          <br/>
-          - Implantação diferenciada aos clientes;
-          <br/>
-          - Praticidade na gestão dos benefícios e relatórios;
-          <br/>
-          - Possibilidade de negociação diferenciada.
-          <br/>
+          <br /><br />
+          <ul>
+            <li>
+              - A Sodexo possui vasta rede credenciada em todo o território nacional;
+            </li>
+            <li>
+              - A Sodexo possui vasta rede credenciada em todo o território nacional;
+            </li>
+            <li>
+              - Redução do tempo de recrutamento;
+            </li>
+            <li>
+              - Redução com absenteísmos;
+            </li>
+            <li>
+              - Redução da folha de pagamento;
+            </li>
+            <li>
+              - Implantação diferenciada aos clientes;
+            </li>
+            <li>
+              - Praticidade na gestão dos benefícios e relatórios;
+            </li>
+            <li>
+              - Possibilidade de negociação diferenciada.
+            </li>
+          </ul>
         </div>
+
+        <Contact text='Solicite uma proposta Vuit Benefícios' />
 
         <BreakLine />
 
-        <a href='https://vuit.com.br/cred' className='images hover:scale-105'>
+        <a href='https://vuit.com.br/cred' target='_blank' className='images hover:scale-[1.00001]'>
           <img src='https://1pg.link/uploads/block_images/145234f7f7df2d6e3302e1889985c5e7.png' className='images hover:scale-105' />
         </a>
 
         <div className='text-box'>
-          A Vuit Cred é uma empresa do Grupo Vuit, que é responsável pela gestão de mais de 150 mil pessoas e mais de 1.500 empresas assistidas por seus produtos e benefícios.
-          <br /><br />
-          Devido à capilaridade de clientes espalhados em todos os estados brasileiros, foi possível conquistar reduções nas taxas, nos custos e personalizar os processos.
-          <br /><br />
-          Contratando o crédito consignado com a Vuit Cred é possível ajudar seus colaboradores a terem crédito ágil e simples, tudo com desburocratização. sendo um facilitador ao RH da empresa.
-          <br /><br />
-          - MENOR TAXA DE JUROS
-          <br /><br />
-          - EDUCAÇÃO FINANCEIRA E DE QUALIDADE
-          <br /><br />
-          41 2101 1724
-          <br />
-          41 99267 2010
-          <br /><br />
-          @VUITCRED
+          <ul>
+            <li>
+              A Vuit Cred é uma empresa do Grupo Vuit, que é responsável pela gestão de mais de 150 mil pessoas e mais de 1.500 empresas assistidas por seus produtos e benefícios.
+            </li>
+            <br/>
+            <li>
+              Devido à capilaridade de clientes espalhados em todos os estados brasileiros, foi possível conquistar reduções nas taxas, nos custos e personalizar os processos.
+            </li>
+            <br/>
+            <li>
+              Contratando o crédito consignado com a Vuit Cred é possível ajudar seus colaboradores a terem crédito ágil e simples, tudo com desburocratização. sendo um facilitador ao RH da empresa.
+            </li>
+            <br/>
+            <li>
+              - MENOR TAXA DE JUROS
+            </li>
+            <br/>
+            <li>
+              - EDUCAÇÃO FINANCEIRA E DE QUALIDADE
+            </li>
+            <br/>
+            <li>
+              41 2101 1724
+            </li>
+            <li>
+              41 99267 2010
+            </li>
+            <br/>
+            <li>
+              @VUITCRED
+            </li>
+          </ul>
         </div>
 
         <Contact text='Solicite uma proposta Vuit Cred' />
 
         <BreakLine />
 
-        <h4>CONTATOS:</h4>
+        <h4 className="text-[22px]">CONTATOS:</h4>
 
-        <iframe className='w-full rounded-s overflow-hidden aspect-[38/35]' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
+        <div className='w-full rounded-s aspect-[38/35.4] my-6  box-border'>
+          <iframe scrolling="no" className='w-full h-full rounded' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
+        </div>
 
         <a className='bg-[#1B8B1D] contact'>
           <svg className='h-4 w-4 mx-2' fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
@@ -201,7 +231,7 @@ export default function Home() {
         </a>
 
         <a className='bg-[#4EABE1] contact'>
-          <svg viewBox="0 0 1024 1024" fill="currentColor" height="1em" width="1em">
+          <svg className='h-4 w-4 mx-2' viewBox="0 0 1024 1024" fill="currentColor" height="1em" width="1em">
             <path d="M885.6 230.2L779.1 123.8a80.83 80.83 0 00-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L549.8 238.4a80.83 80.83 0 00-23.8 57.3c0 21.7 8.5 42.1 23.8 57.4l83.8 83.8A393.82 393.82 0 01553.1 553 395.34 395.34 0 01437 633.8L353.2 550a80.83 80.83 0 00-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L123.8 664.5a80.89 80.89 0 00-23.8 57.4c0 21.7 8.5 42.1 23.8 57.4l106.3 106.3c24.4 24.5 58.1 38.4 92.7 38.4 7.3 0 14.3-.6 21.2-1.8 134.8-22.2 268.5-93.9 376.4-201.7C828.2 612.8 899.8 479.2 922.3 344c6.8-41.3-6.9-83.8-36.7-113.8z" />
           </svg>
           <span>Telefone</span>
@@ -209,28 +239,19 @@ export default function Home() {
 
         <BreakLine />
 
-        <h4>LOCALIZAÇÃO:</h4>
+        <h4 className="text-[22px]">LOCALIZAÇÃO:</h4>
 
-        <div className='w-[100%] h-[450px] '>
-          {isLoaded ? (
-            <GoogleMap
-              mapContainerStyle={{ width: '100%', height: '100%' }}
-              center={{ lat: -25.443722042707897, lng: -49.27896712481774 }}
-              zoom={15}
-            >
-              { /* Child components, such as markers, info windows, etc. */}
-              <></>
-            </GoogleMap>
-          ) : <></>}
+        <div className="w-[100%] h-[450px] my-8">
+          <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7205.674865893085!2d-49.278171!3d-25.443698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce47a1da489ef%3A0x7196738ccfabf8be!2sR.%20Pasteur%2C%20463%20-%20Batel%2C%20Curitiba%20-%20PR%2C%2080250-104!5e0!3m2!1spt-BR!2sbr!4v1694789038979!5m2!1spt-BR!2sbr" allowFullScreen loading="lazy"></iframe>
         </div>
 
-        <div className="text-box items-center justify-center flex text-center">
+        <div className="text-box items-center justify-center flex text-center my-5">
           Rua Pasteur, 463 - Água Verde -13 andar
           <br />
           Curitiba-PR
         </div>
 
-        <img className="h-[150px] w-[350px]" src="https://1pg.link/uploads/block_images/881e9b2b95785d8b81100c2785a72376.png" />
+        <img className="h-[150px] w-[350px] my-8" src="https://1pg.link/uploads/block_images/881e9b2b95785d8b81100c2785a72376.png" />
 
       </div>
 
