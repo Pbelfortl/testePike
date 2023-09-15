@@ -16,11 +16,18 @@
   }
 }
 
+*{
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: 'Open+Sans', "Helvetica Neue", Arial, sans-serif !important;
   box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background: url('https://1pg.link/uploads/backgrounds/25e7f2a80789126ca80e4437e77e9b22.png');
   background-color: #062642;
@@ -30,12 +37,6 @@ body {
   background-position: top;
   display: flex;
   align-items: center;
-}
-
-.map-marker {
-  margin-left: 180px;
-  width: 150px;
-  text-wrap: wrap;
 }
 
 /* components */
@@ -68,18 +69,5 @@ body {
 
   .contact {
     @apply transition-all ease-linear my-2 rounded-full flex justify-center items-center w-[100%] h-[55px] hover:cursor-pointer hover:scale-105 border-white border-[1.5px]
-  }
-}
-
-@layer utilities {
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-
-    .no-scrollbar-::-webkit-scrollbar {
-      display: none;
   }
 }
