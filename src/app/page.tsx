@@ -219,7 +219,7 @@ export default function Home() {
 
         <h4 className="text-[22px]">CONTATOS:</h4>
 
-        <div className='w-full rounded-s sm:aspect-[38/36] aspect-[10/11] my-6  box-border'>
+        <div className='w-full rounded-s sm:aspect-[1/1] aspect-[10/11] md:aspect-[38/36] my-6  box-border'>
           <iframe scrolling="no" className='w-full h-full rounded' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
         </div>
 
