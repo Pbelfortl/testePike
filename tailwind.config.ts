@@ -14,7 +14,8 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       aspectRatio: {
-        '38/35': '38/35'
+        '38/35': '38/35',
+        '12/3': '12/3'
       }
     },
   },

@@ -23,8 +23,8 @@
 
 body {
   font-family: 'Open+Sans', "Helvetica Neue", Arial, sans-serif !important;
-  box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,11 +60,11 @@ body {
   }
 
   .images {
-    @apply w-full h-[180px] rounded-md my-2 transition-all
+    @apply w-full aspect-auto rounded-md my-2 transition-all
   }
 
   .card {
-    @apply w-full bg-white my-1.5 text-black rounded-md py-3 px-6 flex flex-col text-[15px]
+    @apply w-full bg-white my-1.5 text-black rounded-md px-6 flex flex-col text-[15px]
   }
 
   .contact {

@@ -10,11 +10,11 @@ export default function Home() {
   const [openCard, setOpenCard] = useState(0)
 
   return (
-    <div className='flex items-center justify-center'>
+    <>
 
       <Menu />
 
-      <div className='flex flex-col lg:w-[760px] md:w-[640px] sm:[w-360px] box-border px-2 justify-center items-center'>
+      <div className='flex flex-col lg:w-[760px] md:w-[640px] sm:[w-360px] box-border px-2 w-full justify-center items-center'>
         <div className='my-14 w-full p-10'>
           <div className='flex justify-center items-center'>
             <img src='https://1pg.link/uploads/block_images/eefecab91413df539605c33a980f57f5.png' />
@@ -219,7 +219,7 @@ export default function Home() {
 
         <h4 className="text-[22px]">CONTATOS:</h4>
 
-        <div className='w-full rounded-s aspect-[38/36] my-6  box-border'>
+        <div className='w-full rounded-s sm:aspect-[38/36] aspect-[10/11] my-6  box-border'>
           <iframe scrolling="no" className='w-full h-full rounded' src={`https://www.instagram.com/vuitseguros/embed/?cr=1&amp;v=13&amp;rd=https%3A%2F%2Fvuit.com.br&amp;rp=%2Fhome#%7B%22ci%22%3A0%2C%22os%22%3A2500.2999999821186%2C%22ls%22%3A706.5%2C%22le%22%3A2238.9000000059605%7D`}></iframe>
         </div>
 
@@ -255,7 +255,7 @@ export default function Home() {
 
       </div>
 
-    </div>
+    </>
 
   )
 
